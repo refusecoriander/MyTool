@@ -3,7 +3,7 @@
     <!-- 头 -->
     <div>
       <div class="block">
-        <iframe id="Iframe" :src="bdTokenUrl" scrolling="no" style="width:100%;height:100%;"></iframe>
+        <iframe id="Iframe" :src="bdTokenUrl" scrolling="no" style=" border:0px;width:100%;height:100%;"></iframe>
       </div>
     </div>
   </div>
