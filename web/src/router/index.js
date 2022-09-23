@@ -6,6 +6,7 @@ import Home from '../components/Home.vue'
 import Organ from '../components/Organ.vue'
 import Archive from '../components/Archive.vue'
 import dwv_1 from '../components/dwv_1.vue'
+import BaoTa from '../components/BaoTa.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/home',
       component: Home,
       children: [{ path: '/organ', component: Organ}]
+    },
+    { 
+      path: '/home',
+      component: Home,
+      children: [{ path: '/baota', component: BaoTa}]
     },
     { 
       path: '/home',

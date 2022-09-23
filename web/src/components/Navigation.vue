@@ -10,21 +10,21 @@
         <h1 class="Mytools">Mytools</h1>
         <h1>------</h1>
         <h1 style="color:#35495e">天才北的小工具箱</h1>
-        <el-row :gutter="20">
+        <!-- <el-row :gutter="20">
           <el-col :span="24">
             <el-button size="large" type="primary" @click="cimsInputClick1">X-UI</el-button>
           </el-col>
-        </el-row>
+        </el-row> -->
         <el-row>
           <el-col :span="24">
-            <el-button size="large" type="primary" @click="cimsInputClick2">RackNerd</el-button>
+            <el-button size="large" type="primary" @click="cimsInputClick2">工具</el-button>
           </el-col>
         </el-row>
-        <el-row>
+        <!-- <el-row>
           <el-col :span="24">
             <el-button size="large" type="primary" @click="cimsInputClick2">宝塔面板</el-button>
           </el-col>
-        </el-row>
+        </el-row> -->
       </div>
     </el-main>
     <!-- 尾 -->
@@ -53,15 +53,15 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
     },
-    cimsInputClick1() {
+    /* cimsInputClick1() {
       window.open('https://test.refusecoriander.top/racknerd', '_blank')
-    },
+    }, */
     cimsInputClick2() {
-      window.open('https://my.racknerd.com/clientarea.php?action=productdetails&id=162823&language=chinese', '_blank')
+      window.open('http://tools.liumingye.cn/', '_blank')
     },
-    cimsInputClick3() {
+    /* cimsInputClick3() {
       window.open('http://172.245.60.107:8888/c9b3323e/', '_blank')
-    }
+    } */
   }
 }
 </script>

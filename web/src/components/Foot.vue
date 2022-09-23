@@ -15,10 +15,10 @@
                 <el-menu-item index="/dicom" @click="showAllQuizs('items')">工具一</el-menu-item>
             </el-col>
             <el-col :span="8">
-                <el-menu-item index="/organ">工具二</el-menu-item>
+                <el-menu-item index="/baota">宝塔面板</el-menu-item>
             </el-col>
             <el-col :span="8">
-                <el-menu-item index="/archive">工具三</el-menu-item>
+                <el-menu-item index="/archive">X-UI面板</el-menu-item>
             </el-col>
         </el-menu>
     </div>
