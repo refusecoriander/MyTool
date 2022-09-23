@@ -1,49 +1,26 @@
 <template>
   <el-container id="home" class="container">
-    <!-- 头 -->
-    <el-Header style="margin-bottom: 2px">
-      <v-header :headTitle="headTitle"></v-header>
-    </el-Header>
-    <!-- 主体 -->
     <el-main>
-      <div>
+      <div style="top:300px;" >
         <h1 class="Mytools">Mytools</h1>
         <h1>------</h1>
         <h1 style="color:#35495e">天才北的小工具箱</h1>
-        <!-- <el-row :gutter="20">
-          <el-col :span="24">
-            <el-button size="large" type="primary" @click="cimsInputClick1">X-UI</el-button>
-          </el-col>
-        </el-row> -->
         <el-row>
           <el-col :span="24">
             <el-button size="large" type="primary" @click="cimsInputClick2">工具</el-button>
           </el-col>
         </el-row>
-        <!-- <el-row>
-          <el-col :span="24">
-            <el-button size="large" type="primary" @click="cimsInputClick2">宝塔面板</el-button>
-          </el-col>
-        </el-row> -->
       </div>
     </el-main>
-    <!-- 尾 -->
-    <el-footer style="height:56px">
-      <v-footer></v-footer>
-    </el-footer>
   </el-container>
 </template>
 
 <script>
 
-import vHeader from './Head'
-import vFooter from './Foot'
 
 export default {
   name: 'navigation',
   components: {
-    vHeader,
-    vFooter
   },
   data: function () {
     return {

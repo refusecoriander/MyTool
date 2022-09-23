@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import { 
     Button,
+    Backtop,
     ButtonGroup,
     Dropdown,
     DropdownMenu,
@@ -18,17 +19,21 @@ import {
     RadioGroup,
     Menu,
     MenuItem,
+    MenuItemGroup,
     Table,
     TableColumn,
     DatePicker,
     Form,
     FormItem,
     Select,
+    Submenu,
     Option,
-    Link
+    Link,
+    
 } from 'element-ui'
 
 Vue.use(Button)
+Vue.use(Backtop)
 Vue.use(ButtonGroup)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
@@ -46,11 +51,13 @@ Vue.use(RadioButton)
 Vue.use(RadioGroup)
 Vue.use(Menu)
 Vue.use(MenuItem)
+Vue.use(MenuItemGroup)
 Vue.use(Table)
 Vue.use(TableColumn)
 Vue.use(DatePicker)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Select)
+Vue.use(Submenu)
 Vue.use(Option)
 Vue.use(Link)

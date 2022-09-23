@@ -3,10 +3,10 @@ import Router from 'vue-router'
 import Navigation from '../components/Navigation.vue'
 import Dicom from '../components/dwv.vue'
 import Home from '../components/Home.vue'
-import Organ from '../components/Organ.vue'
 import Archive from '../components/Archive.vue'
-import dwv_1 from '../components/dwv_1.vue'
 import BaoTa from '../components/BaoTa.vue'
+import Racknerd from '../components/Racknerd.vue'
+
 
 Vue.use(Router)
 
@@ -29,11 +29,6 @@ export default new Router({
     { 
       path: '/home',
       component: Home,
-      children: [{ path: '/organ', component: Organ}]
-    },
-    { 
-      path: '/home',
-      component: Home,
       children: [{ path: '/baota', component: BaoTa}]
     },
     { 
@@ -44,7 +39,7 @@ export default new Router({
     { 
       path: '/home',
       component: Home,
-      children: [{ path: '/dwv_1', component: dwv_1}]
+      children: [{ path: '/racknerd', component: Racknerd}]
     },
   ]
 })

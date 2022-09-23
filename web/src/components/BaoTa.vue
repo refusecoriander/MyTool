@@ -1,35 +1,22 @@
 <template>
     <div class="container">
-      <!-- 头 -->
-      <el-Header style="margin-bottom: 2px">
-        <v-header :headTitle="headTitle"></v-header>
-      </el-Header>
       <div>
         <div class="block">
           <iframe id="Iframe" :src="bdTokenUrl" scrolling="no" style="width:100%;height:100%;"></iframe>
         </div>
       </div>
-      <el-footer style="height:56px" >
-        <v-footer></v-footer>
-      </el-footer>
     </div>
   </template>
   
   
   <script>
-  import vHeader from "./Head";
-  import vFooter from './Foot'
   
   export default {
-    name: "archive",
     components: {
-      vHeader,
-      vFooter
     },
     data: function () {
       return {
         bdTokenUrl: 'http://172.245.60.107:8888/c9b3323e/',
-        headTitle: "宝塔面板",
         value1: "",
       };
     },

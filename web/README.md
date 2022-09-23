@@ -1,4 +1,4 @@
-# medica
+# mytools
 
 ## Project setup
 ```
