@@ -7,7 +7,7 @@
         <h1 style="color:#35495e">天才北的小工具箱</h1>
         <el-row>
           <el-col :span="24">
-            <el-button size="large" type="primary" @click="cimsInputClick2">工具</el-button>
+            <el-button size="large" type="primary" @click="cimsInputClick2">刘明野工具集</el-button>
           </el-col>
         </el-row>
       </div>
@@ -44,18 +44,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// 上中下
-.el-header,
-.el-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-  padding: 0;
-}
-
 .el-main {
-  background-color: #E9EEF3;
+  background-color: #ffffff;
   color: #333;
   text-align: center;
   padding: 0px;
@@ -66,6 +56,7 @@ export default {
 .container {
   height: 100vh;
   padding: 0px;
+  background-color: white;
 }
 
 body>.el-container {

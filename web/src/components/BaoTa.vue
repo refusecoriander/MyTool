@@ -20,12 +20,6 @@
         value1: "",
       };
     },
-    /* created() {
-      this.getUrl();
-      this.$nextTick(() => {
-        this.getCode();
-      });
-    }, */
     mounted() {
       /**
        * iframe-宽高自适应显示   
@@ -38,44 +32,8 @@
       oIframe.style.height = (Number(deviceHeight) - 120) + 'px'; //数字是页面布局高度差
     },
     methods: {
-      /**
-       * 获取-外部接口信息
-       */
-      /* getUrl() {
-        let that = this
-        let bdUrl = { queryurl: this.$paths.bdpath + '/locate' };
-        this.$api.getBdToken(bdUrl, function (res) {
-          that.bdTokenUrl = res.data.data;
-        })
-      }, */
     }
   };
   </script>
   <style lang="less" scoped>
-  .el-header {
-    background-color: #b3c0d1;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
-    padding: 0;
-  }
-  .el-footer {
-    background-color: #b3c0d1;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
-    padding: 0;
-  }
-  
-  .el-dropdown {
-    vertical-align: top;
-  }
-  
-  .el-dropdown+.el-dropdown {
-    margin-left: 15px;
-  }
-  
-  .el-icon-arrow-down {
-    font-size: 12px;
-  }
   </style>

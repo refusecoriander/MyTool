@@ -1,26 +1,26 @@
 <template>
   <div>
     <div class="allmenu" >
-      <el-button icon="el-icon-menu" @click="openDrawer" type="primary" circle>
+      <el-button class="menubt" icon="el-icon-menu" @click="openDrawer" type="primary" circle>
     </el-button>
     </div>
-    <el-drawer :visible.sync="drawer" direction="ltr" :with-header="false" @closeDrawer="closeDrawer" >
+    <el-drawer :visible.sync="drawer" direction="ltr" :with-header="false" @closeDrawer="closeDrawer" size='30%' >
       <el-row style="top:20px;" class="tac">
         <el-col :span="24">
           <el-menu :router="true" default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
-            <el-menu-item @click="closeDrawer" index="/navigation">
+            <el-menu-item style="padding:8px" @click="closeDrawer" index="/navigation">
               <i class="el-icon-document"></i>
               <span slot="title">主页</span>
             </el-menu-item>
-            <el-menu-item @click="closeDrawer" index="/archive">
+            <el-menu-item style="padding:8px" @click="closeDrawer" index="/archive">
               <i class="el-icon-menu"></i>
               <span slot="title">X-UI面板</span>
             </el-menu-item>
-            <el-menu-item @click="closeDrawer" index="/baota">
+            <el-menu-item style="padding:8px" @click="closeDrawer" index="/baota">
               <i class="el-icon-document"></i>
               <span slot="title">宝塔面板</span>
             </el-menu-item>
-            <el-menu-item @click="closeDrawer" index="/racknerd">
+            <el-menu-item style="padding:8px" @click="closeDrawer" index="/racknerd">
               <i class="el-icon-setting"></i>
               <span slot="title">Racknerd</span>
             </el-menu-item>
@@ -60,10 +60,26 @@ export default {
   bottom: 60px;		    /* 距离浏览器窗口下边框20px */
   right: 24px;		    /* 距离浏览器窗口右边框20px */
 }
-.allmenu el-button{
-  display: block;			           /* 将<a>标签设为块元素，用于美化样式 */
-  border: 1px solid #ccc;		  /* 设置边框样式 */
-  padding: 10px 20px;			       /* 设置内边距 */
+.allmenu.el-button{
+  padding: 10px 10px;			       /* 设置内边距 */
   letter-spacing: 2px;		       /* 设置文字间距 */
+  background-color: #0000005e;
+  border-color: #0000005e;
+}
+/deep/.el-drawer.ltr {
+    background: rgba(9, 9, 9, 0.397);;
+  }
+  /deep/.el-menu {
+    background: rgba(23, 175, 23, 0);;
+  }
+  /deep/.el-menu-item {
+    color:#F8F8FF;
+  }
+  /deep/.el-menu-item.is-active {
+    background-color:#04040463;
+  }
+.menubt{
+  background-color: #0000005e;
+  border-color: #00000000;
 }
 </style>
