@@ -7,7 +7,10 @@
         <h1 style="color:#35495e">天才北的小工具箱</h1>
         <el-row>
           <el-col :span="24">
-            <el-button size="large" type="primary" @click="cimsInputClick2">刘明野工具集</el-button>
+            <el-button size="large" type="primary" @click="cimsInputClick1">刘明野工具集</el-button>
+          </el-col>
+          <el-col style="margin-top:20px" :span="24">
+            <el-button size="large" type="primary" @click="cimsInputClick2">去水印</el-button>
           </el-col>
         </el-row>
       </div>
@@ -16,7 +19,6 @@
 </template>
 
 <script>
-
 
 export default {
   name: 'navigation',
@@ -30,11 +32,11 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
     },
-    /* cimsInputClick1() {
+    cimsInputClick1() {
       window.open('https://test.refusecoriander.top/racknerd', '_blank')
-    }, */
+    },
     cimsInputClick2() {
-      window.open('http://tools.liumingye.cn/', '_blank')
+      this.$router.push({path:'/watermark'})
     },
     /* cimsInputClick3() {
       window.open('http://172.245.60.107:8888/c9b3323e/', '_blank')

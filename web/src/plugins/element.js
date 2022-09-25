@@ -1,13 +1,17 @@
 import Vue from 'vue'
 import { 
+    Avatar,
     Button,
     Backtop,
     ButtonGroup,
     Dropdown,
     DropdownMenu,
     DropdownItem,
+    Card,
     Container,
     Header,
+    Input,
+    Loading,
     Main,
     Footer,
     Row,
@@ -29,16 +33,22 @@ import {
     Submenu,
     Option,
     Link,
+    Notification,
+    Popover
     
 } from 'element-ui'
-
+Vue.prototype.$notify = Notification;
+Vue.use(Avatar)
 Vue.use(Button)
 Vue.use(Backtop)
 Vue.use(ButtonGroup)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
+Vue.use(Card)
 Vue.use(Container)
+Vue.use(Input)
+Vue.use(Loading)
 Vue.use(Header)
 Vue.use(Main)
 Vue.use(Footer)
@@ -61,3 +71,4 @@ Vue.use(Select)
 Vue.use(Submenu)
 Vue.use(Option)
 Vue.use(Link)
+Vue.use(Popover)

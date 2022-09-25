@@ -56,6 +56,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .allmenu {
+  z-index:9000;
   position: fixed;	  /* 设置fixed固定定位 */
   bottom: 60px;		    /* 距离浏览器窗口下边框20px */
   right: 24px;		    /* 距离浏览器窗口右边框20px */
@@ -70,15 +71,19 @@ export default {
     background: rgba(9, 9, 9, 0.397);;
   }
   /deep/.el-menu {
-    background: rgba(23, 175, 23, 0);;
+    background: rgba(48, 49, 48, 0);;
   }
   /deep/.el-menu-item {
     color:#F8F8FF;
   }
+  /deep/.el-menu-item:hover{
+    background-color: #04040463;
+}
   /deep/.el-menu-item.is-active {
     background-color:#04040463;
   }
 .menubt{
+  
   background-color: #0000005e;
   border-color: #00000000;
 }

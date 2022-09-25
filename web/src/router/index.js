@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Navigation from '../components/Navigation.vue'
-import Dicom from '../components/dwv.vue'
+import Watermark from '../components/Watermark.vue'
 import Home from '../components/Home.vue'
 import Archive from '../components/Archive.vue'
 import BaoTa from '../components/BaoTa.vue'
@@ -22,11 +22,6 @@ export default new Router({
       children: [{ path: '/navigation', component: Navigation}]
     },
     { 
-      path: '/dicom',
-      component: Home,
-      children: [{ path: '/dicom', component: Dicom}]
-    },
-    { 
       path: '/home',
       component: Home,
       children: [{ path: '/baota', component: BaoTa}]
@@ -40,6 +35,11 @@ export default new Router({
       path: '/home',
       component: Home,
       children: [{ path: '/racknerd', component: Racknerd}]
+    },
+    { 
+      path: '/home',
+      component: Home,
+      children: [{ path: '/watermark', component: Watermark}]
     },
   ]
 })
