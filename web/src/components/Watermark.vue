@@ -5,7 +5,7 @@
         <el-col :span="24">
           <h1 style="color:white" >短视频/图集在线去水印解析</h1>
         </el-col>
-        <el-col style="padding-right:20px;padding-left:20px">
+        <el-col style="padding-right:4px;padding-left:4px">
           <div class="main" v-loading="loading">
             <div class="grid-content">
               <el-input placeholder="请粘贴分享链接" v-model="input" id="url" lass="input-with-select">
@@ -24,16 +24,16 @@
             </div>
           </div>
         </el-col>
-        <el-col  style="margin-top:10px">
-          <el-popover placement="bottom" width="400" trigger="click" style="margin-right:20px;">
+        <el-col  style="margin-top:0px">
+          <el-popover placement="bottom" width="360" trigger="click" style="margin-right:10px;">
             <p><strong>目前支持 </strong>抖音/皮皮虾/火山/微视/微博/绿洲/最右/轻视频/instagram/哔哩哔哩/快手/全民小视频/皮皮搞笑/全民k歌/巴塞电影/陌陌/Before避风/开眼/Vue
               Vlog/小咖秀/西瓜视频</p>
             <p><strong>温馨提示 </strong>粘贴视频地址时<u>无需删除文案</u><small> 但如果视频链接正确但解析失败请删掉文案后重试</small></p>
-            <el-button class="warning" type="primary" icon="el-icon-warning-outline" slot="reference">提示</el-button>
+            <el-button style="padding:5px; width:70px" class="warning" type="primary" icon="el-icon-warning-outline" slot="reference">提示</el-button>
           </el-popover>
-          <el-button @click="sendcoversrc" plain>下载封面</el-button>
-          <el-button @click="sendurlsrc" plain>下载视频</el-button>
-          <el-button @click="sendmusicsrc" plain>下载音乐</el-button>
+          <el-button class="menubt" @click="sendcoversrc" plain>下载封面</el-button>
+          <el-button class="menubt" @click="sendurlsrc" plain>下载视频</el-button>
+          <el-button class="menubt" @click="sendmusicsrc" plain>下载音乐</el-button>
         </el-col>
       </el-row>
       <el-row class="show" >
@@ -156,12 +156,20 @@ body:before {
 .menu{
   padding: 5px;
   background-color: rgb(0, 0, 0);
-  height: 15%;
+  height: 25%;
 }
 .show{
   padding: 5px;
   background-color: #000000;
-  height: 85%;
+  height: 75%;
+}
+
+.menubt{
+  margin-top: 0px;
+  margin-left:5px;
+  margin-bottom: 0px;
+  padding:5px; 
+  width:23%;
 }
 
 .grid-content {
