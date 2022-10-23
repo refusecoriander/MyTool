@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Navigation from '../components/Navigation.vue'
 import Watermark from '../components/Watermark.vue'
+import Twitterdown from '../components/Twitterdown'
 import Home from '../components/Home.vue'
 import Archive from '../components/Archive.vue'
 import BaoTa from '../components/BaoTa.vue'
@@ -40,6 +41,11 @@ export default new Router({
       path: '/home',
       component: Home,
       children: [{ path: '/watermark', component: Watermark}]
+    },
+    { 
+      path: '/home',
+      component: Home,
+      children: [{ path: '/twitterdown', component: Twitterdown}]
     },
   ]
 })

@@ -4,13 +4,16 @@
       <div style="top:300px;" >
         <h1 class="Mytools">Mytools</h1>
         <h1>------</h1>
-        <h1 style="color:#35495e">天才北的小工具箱</h1>
+        <h1 style="color:#35495e">拒绝香菜的小工具箱</h1>
         <el-row>
           <el-col :span="24">
             <el-button size="large" type="primary" @click="cimsInputClick1">刘明野工具集</el-button>
           </el-col>
           <el-col style="margin-top:20px" :span="24">
             <el-button size="large" type="primary" @click="cimsInputClick2">去水印</el-button>
+          </el-col>
+          <el-col style="margin-top:20px" :span="24">
+            <el-button size="large" type="primary" @click="cimsInputClick3">推特视频下载</el-button>
           </el-col>
         </el-row>
       </div>
@@ -38,9 +41,9 @@ export default {
     cimsInputClick2() {
       this.$router.push({path:'/watermark'})
     },
-    /* cimsInputClick3() {
-      window.open('http://172.245.60.107:8888/c9b3323e/', '_blank')
-    } */
+    cimsInputClick3() {
+      this.$router.push({path:'/twitterdown'})
+    } 
   }
 }
 </script>
