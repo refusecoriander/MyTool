@@ -1,11 +1,13 @@
 <template>
   <el-container class="container">
     <el-main>
-      <el-row class="menu" >
+      <el-row>
         <el-col :span="24">
-          <h1 style="color:white" >短视频/图集在线去水印解析</h1>
+          <h1 style="color:white">短视频/图集在线去水印解析</h1>
         </el-col>
-        <el-col style="padding-right:4px;padding-left:4px">
+      </el-row>
+      <el-row>
+        <el-col>
           <div class="main" v-loading="loading">
             <div class="grid-content">
               <el-input placeholder="请粘贴分享链接" v-model="input" id="url" lass="input-with-select">
@@ -24,23 +26,24 @@
             </div>
           </div>
         </el-col>
-        <el-col  style="margin-top:0px">
-          <el-popover placement="bottom" width="360" trigger="click" style="margin-right:10px;">
+      </el-row>
+      <el-row :gutter="4">
+        <el-col :span="6">
+          <el-popover placement="bottom" trigger="click">
             <p><strong>目前支持 </strong>抖音/皮皮虾/火山/微视/微博/绿洲/最右/轻视频/instagram/哔哩哔哩/快手/全民小视频/皮皮搞笑/全民k歌/巴塞电影/陌陌/Before避风/开眼/Vue
               Vlog/小咖秀/西瓜视频</p>
             <p><strong>温馨提示 </strong>粘贴视频地址时<u>无需删除文案</u><small> 但如果视频链接正确但解析失败请删掉文案后重试</small></p>
-            <el-button style="padding:5px; width:70px" class="warning" type="primary" icon="el-icon-warning-outline" slot="reference">提示</el-button>
+            <el-button style="padding-left: 12px; width:100%" class="warning" type="primary" icon="el-icon-warning-outline"
+              slot="reference">提示</el-button>
           </el-popover>
-          <el-button class="menubt" @click="sendcoversrc" plain>下载封面</el-button>
-          <el-button class="menubt" @click="sendurlsrc" plain>下载视频</el-button>
-          <el-button class="menubt" @click="sendmusicsrc" plain>下载音乐</el-button>
         </el-col>
+        <el-col :span="6"><el-button class="menubt" @click="sendcoversrc" plain>下载封面</el-button></el-col>
+        <el-col :span="6"><el-button class="menubt" @click="sendurlsrc" plain>下载视频</el-button></el-col>
+        <el-col :span="6"><el-button class="menubt" @click="sendmusicsrc" plain>下载音乐</el-button></el-col>
       </el-row>
-      <el-row class="show" >
-        <el-col style="height:100%">
-          <iframe id="Iframe" :src="downsrcs" scrolling="no" style=" border:0px; width:100%;height:100%;"></iframe>
-        </el-col>
-      </el-row>
+        <div class="block">
+          <iframe id="Iframe1" :src="downsrcs" scrolling="no" style=" border:0px; width:100%;height:100%;"></iframe>
+        </div>
     </el-main>
   </el-container>
 </template>
@@ -59,17 +62,9 @@ export default {
       images_url: {}
     }
   },
-  /* 
-    mounted(){
-      document.getElementById('Iframe').src=document.getElementById('Iframe').src;
-      const oIframe = document.getElementById('Iframe');
-      const deviceWidth = document.documentElement.clientWidth;
-      const deviceHeight = document.documentElement.clientHeight;
-      oIframe.style.width = (Number(deviceWidth)) + 'px'; //数字是页面布局宽度差值
-      oIframe.style.height = (Number(deviceHeight)) + 'px'; //数字是页面布局高度差
-    }, */
+  
+    
   methods: {
-
     onSubmit() {
       this.loading = true
       const url = /http[s]?:\/\/[\w.]+[\w/]*[\w.]*\??[\w=&:\-+%]*[/]*/.exec(this.input)
@@ -119,15 +114,23 @@ export default {
       }
     },
     sendcoversrc(downsrcs) {
-      document.getElementById('Iframe').src = document.getElementById('Iframe').src = this.info.cover;
+      document.getElementById('Iframe1').src = document.getElementById('Iframe1').src = this.info.cover;
     },
     sendurlsrc(downsrcs) {
-      document.getElementById('Iframe').src = document.getElementById('Iframe').src = this.info.url;
+      document.getElementById('Iframe1').src = document.getElementById('Iframe1').src = this.info.url;
     },
     sendmusicsrc(downsrcs) {
-      document.getElementById('Iframe').src = document.getElementById('Iframe').src = this.info.music;
+      document.getElementById('Iframe1').src = document.getElementById('Iframe1').src = this.info.music;
     },
-  }
+  },
+  mounted(){
+      //document.getElementById('Iframe1').src=document.getElementById('Iframe1').src;
+      const oIframe = document.getElementById('Iframe1');
+      const deviceWidth = document.documentElement.clientWidth;
+      const deviceHeight = document.documentElement.clientHeight;
+      oIframe.style.width = (Number(deviceWidth)) + 'px'; //数字是页面布局宽度差值
+      oIframe.style.height = (Number(deviceHeight) - 188) + 'px'; //数字是页面布局高度差
+    }, 
 }
 </script>
 
@@ -153,23 +156,21 @@ body:before {
   padding: 10px;
 }
 
-.menu{
+.menu {
   padding: 5px;
   background-color: rgb(0, 0, 0);
-  height: 25%;
-}
-.show{
-  padding: 5px;
-  background-color: #000000;
-  height: 75%;
 }
 
-.menubt{
+.show {
+  padding: 5px;
+  background-color: #000000;
+}
+
+.menubt {
+  padding-left: 12px;
   margin-top: 0px;
-  margin-left:5px;
   margin-bottom: 0px;
-  padding:5px; 
-  width:23%;
+  width: 100%;
 }
 
 .grid-content {
@@ -229,5 +230,9 @@ hr {
   margin-bottom: .8em;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+.block{
+margin-top:8px;
+
 }
 </style>

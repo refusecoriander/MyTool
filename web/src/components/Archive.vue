@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <div class="block">
-        <iframe id="Iframe" :src="bdTokenUrl" scrolling="no" style=" border:0px; width:100%;height:100%;"></iframe>
+        <iframe id="Iframe" :src="bdTokenUrl" scrolling="no" frameborder="0" style=" border:0px; width:100%;height:100%;"></iframe>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@ export default {
     /**
      * iframe-宽高自适应显示   
      */
-    document.getElementById('Iframe').src=document.getElementById('Iframe').src;
+    //document.getElementById('Iframe').src=document.getElementById('Iframe').src;
     const oIframe = document.getElementById('Iframe');
     const deviceWidth = document.documentElement.clientWidth;
     const deviceHeight = document.documentElement.clientHeight;
