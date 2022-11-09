@@ -34,7 +34,9 @@ import {
     Option,
     Link,
     Notification,
-    Popover
+    Popover,
+    Tabs,
+    TabPane
     
 } from 'element-ui'
 Vue.prototype.$notify = Notification;
@@ -72,3 +74,5 @@ Vue.use(Submenu)
 Vue.use(Option)
 Vue.use(Link)
 Vue.use(Popover)
+Vue.use(Tabs)
+Vue.use(TabPane)

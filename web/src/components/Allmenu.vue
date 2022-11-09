@@ -12,7 +12,7 @@
               <i class="el-icon-document"></i>
               <span slot="title">主页</span>
             </el-menu-item>
-            <el-menu-item style="padding:8px" @click="closeDrawer" index="/archive">
+            <el-menu-item style="padding:8px" @click="closeDrawer" index="/xui">
               <i class="el-icon-menu"></i>
               <span slot="title">X-UI面板</span>
             </el-menu-item>

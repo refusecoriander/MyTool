@@ -4,9 +4,10 @@ import Navigation from '../components/Navigation.vue'
 import Watermark from '../components/Watermark.vue'
 import Twitterdown from '../components/Twitterdown'
 import Home from '../components/Home.vue'
-import Archive from '../components/Archive.vue'
+import Xui from '../components/Xui.vue'
 import BaoTa from '../components/BaoTa.vue'
 import Racknerd from '../components/Racknerd.vue'
+import QRcode from '../components/QRcode.vue'
 
 
 Vue.use(Router)
@@ -30,7 +31,7 @@ export default new Router({
     { 
       path: '/home',
       component: Home,
-      children: [{ path: '/archive', component: Archive}]
+      children: [{ path: '/xui', component: Xui}]
     },
     { 
       path: '/home',
@@ -46,6 +47,11 @@ export default new Router({
       path: '/home',
       component: Home,
       children: [{ path: '/twitterdown', component: Twitterdown}]
+    },
+    { 
+      path: '/home',
+      component: Home,
+      children: [{ path: '/qrcode', component: QRcode}]
     },
   ]
 })
